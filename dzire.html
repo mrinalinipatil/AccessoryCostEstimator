@@ -1,0 +1,329 @@
+<html>
+<head>
+
+<title>Auto Accessories</title>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow:visible;
+    background-color: white;
+}
+
+
+body {
+	   background-image: url("back2.jpg");
+	background-size: cover;
+    background-repeat: no-repeat;
+
+
+	
+
+}
+
+p {
+    font-family: "Arial", Times, serif;
+}
+
+center
+{
+background-color:dark-gray;
+
+
+}
+
+header{
+background-color:black;
+}
+
+td
+{
+align:center;
+}
+
+.polaroid {
+  width: 90%;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+}
+
+
+
+div.container {
+position:center;
+  text-align: center;
+  padding: 5px 20px;
+
+}
+
+.sign{
+height:25%;
+width:100%;
+
+padding:2%;
+
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+            display: block;
+            width: 25%;
+            padding: 10px 16px;
+            font-size: 25px;
+            line-height: 2.3333333;
+            border-radius: 6px;
+            margin-bottom: 0;
+            font-weight: 400;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            border: 1px solid transparent;
+            color: #fff;
+            background-color: #000000;
+            border-color: #ffffff;
+        }
+		   .dvStyle {
+            padding: 20px;
+        }
+		
+		       .tblStyle {
+            width: 50%;
+            border-color: #fff;
+            border-radius: 4px;
+            border-collapse: collapse;
+        }
+
+            .tblStyle tr td {
+                padding: 10px;
+                font-weight: 500;
+                border-color: #fff;
+				color: #fff;
+				
+            }
+
+            .tblStyle tr th {
+                color: #333;
+                background-color: #000000;
+                border-color: #fff;
+                padding-top:10px;
+            }
+
+</style>
+
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+
+
+
+
+<div class="w3-sidebar w3-bar-block w3-card w3-animate-left" style="display:none" id="mySidebar">
+  <button class="w3-bar-item w3-button w3-large"
+  onclick="w3_close()">Close &times;</button>
+  <a href="update.html" class="w3-bar-item w3-button">Update Account</a>
+  <a href="delete.html" class="w3-bar-item w3-button">Delete Account</a>
+  <a href="logout.php" class="w3-bar-item w3-button">Log Out</a>
+</div>
+
+<div id="main">
+
+<div class="w3-black">
+  <button id="openNav" class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>
+  <div class="w3-container">
+    <h1>AUTO ACCESSORIES</h1>
+  </div>
+</div>
+
+
+
+
+
+
+
+<div class="w3-sidebar w3-bar-block w3-card-100 w3-animate-left" style="display:none" id="mySidebar" id="Background">
+ 
+<header>
+
+
+
+</div>
+<div class="w3-main" id="main"></div>
+
+<div class="w3-teal">
+
+
+</div>
+
+
+<center><img id="titleimg" src="tit.png" > <br></center>
+
+
+
+
+</ul>
+</header>
+<center>
+<br>
+<br>
+<br>
+<form action="checkbox.html" method="POST">
+<table width="100%" >
+
+<tr>
+
+<td>
+<center>
+
+<div class="polaroid">
+<center>
+<img src="gearbox.jpg" class="sign"></a>
+</center>
+  <div class="container">
+     <p><b>Gear Box Style Kit<br>Rs.2,500</p>
+		<input type="checkbox" value="2000" id="GearBox" name="check_list[]">
+  </div>
+</div>
+
+</td>
+
+
+
+
+
+<td>
+<center>
+
+<div class="polaroid">
+<center>
+<img src="droid.jpg" class="sign"></a>
+</center>
+  <div class="container">
+     <p><b>Mobile Holder <br>Rs.350</p>
+	<input type="checkbox" value="350" id="MobileHolder" name="check_list[]">
+  </div>
+</div>
+</td>
+
+
+
+<td>
+<center>
+
+<div class="polaroid">
+<center>
+<img src="wheel.jpg" class="sign"></a>
+</center>
+  <div class="container">
+    <p><b>Alloy Wheel <br>Rs.22,000</p>
+		<input type="checkbox" value="22000" id="AlloyWheel" name="check_list[]">
+  </div>
+</div>
+
+</td>
+
+
+
+</tr>
+
+</table>
+
+
+</form>
+<input type="submit" button value="Check Total" id="btnConfirm" onclick="getTotal()"></button>
+
+
+<br>
+
+
+
+
+
+
+
+
+<div class="dvStyle">
+           <table class="tblStyle" bgcolor="gray" align="center" border="1">
+                <tr>
+                    <th colspan="2">
+                        <h3><font color="white"><center>ESTIMATED TOTAL</center></font></h3>
+                    </th>
+                </tr>
+                <tr>
+                    <td><font color="white">Gear Box Style Kit</font>
+                    </td>
+                    <td id="tdGear"></td>
+                </tr>
+               
+				<tr>
+                    <td><font color="white">Mobile Holder</font>
+                    </td>
+                    
+                        <td id="tdMobile"></td>
+						</tr>
+					
+
+                <tr>
+                 <td><font color="white">Alloy Wheel</font>
+                    </td>   
+					
+               <td id="tdAlloy"></td>
+</tr>
+<tr>
+<td><font color="white" size="6"><B>TOTAL</B></font></td>
+<td><font color="white"><p id="finalprice"><font size ="6" color="white"></p></td>
+</tr>
+            </table>
+
+
+
+						<script>
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidebar").style.width = "25%";
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+</script>
+
+
+
+
+
+</body>
+
+</html>
+<script type="text/javascript">
+	function getTotal()
+	{	
+		var sum = 0;
+		var a = 0;
+		var b = 0;
+		var c = 0;
+		if (document.getElementById('GearBox').checked) {
+			a = parseInt(document.getElementById('GearBox').value);
+            sum = sum + a;
+		}
+		if (document.getElementById('MobileHolder').checked) {
+			b = parseInt(document.getElementById('MobileHolder').value);
+            sum = sum + b;
+		}
+		if (document.getElementById('AlloyWheel').checked) {
+			c = parseInt(document.getElementById('AlloyWheel').value);
+            sum = sum + c;
+		}
+
+			document.getElementById('tdGear').innerHTML = a;
+			document.getElementById('tdMobile').innerHTML = b;
+			document.getElementById('tdAlloy').innerHTML = c;
+	document.getElementById('finalprice').innerHTML = sum;
+	}
+</script>
